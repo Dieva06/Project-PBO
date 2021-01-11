@@ -75,7 +75,7 @@ def TampilkanDetail():
     conn.execute('INSERT INTO Detail(JenisPilihan, HargaPerJam, HargaJenis, TambahJamBelajar, PersonID, KursusID) VALUES ("'+JenisPilihan+'", "'+HargaPerJam+'", "'+HargaJenis+'", "'+TambahJamBelajar+'", "'+PersonID+'", "'+KursusID+'")')
     conn.commit()
 
-#TampilkanDetail()
+
 def TotalHarga():
     TambahJamBelajar = int(input('TambahJamBelajar: '))
     HargaPerJam = int(input('HargaPerJam: '))
@@ -256,7 +256,8 @@ def menu():
         1. Mendaftar
         2. Cek Biaya '''))
         if Pilihan2 == 1:
-            tambahSiswa() 
+            tambahSiswa()
+            TampilkanDetail()
         if Pilihan2 == 2:
             TotalHarga()   
    # else:
